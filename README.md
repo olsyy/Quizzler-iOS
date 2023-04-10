@@ -1,5 +1,7 @@
 # 🧩 Quizzler
 This is a simple quiz-app with questions about Swift for beginners. There are two possible answers: true or false.
+There is a branch "multiple-choice" where you find app version with multiple answers.
+
 
 ## Description
 This application was created during ["The Complete iOS App Development Bootcamp"](https://www.udemy.com/course/ios-13-app-development-bootcamp/). Its layout was created from scratch.

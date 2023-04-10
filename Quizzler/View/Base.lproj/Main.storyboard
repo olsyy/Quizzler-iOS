@@ -19,11 +19,18 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="J1S-GK-3nt">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="3gy-Ll-UWu">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="3gy-Ll-UWu">
                                 <rect key="frame" x="16" y="59" width="361" height="759"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P4Z-3G-FrA">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="67"/>
+                                        <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="highlightedColor" systemColor="secondarySystemBackgroundColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMZ-oP-AHT">
-                                        <rect key="frame" x="0.0" y="0.0" width="361" height="562"/>
+                                        <rect key="frame" x="0.0" y="76" width="361" height="486"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -83,7 +90,8 @@
                     <connections>
                         <outlet property="falseButton" destination="sYe-4s-Yxe" id="CM0-pc-o8V"/>
                         <outlet property="progressBar" destination="Cao-Lr-dbj" id="ZWX-oT-HM3"/>
-                        <outlet property="questionLabel" destination="uMZ-oP-AHT" id="dRK-Fr-5U3"/>
+                        <outlet property="questionLabel" destination="uMZ-oP-AHT" id="UZa-bZ-q9f"/>
+                        <outlet property="scoreLabel" destination="P4Z-3G-FrA" id="GRN-Oj-3Po"/>
                         <outlet property="trueButton" destination="ltM-iv-Qcd" id="SbT-cx-HMX"/>
                     </connections>
                 </viewController>
@@ -95,6 +103,9 @@
     <resources>
         <image name="Rectangle" width="322" height="68"/>
         <image name="background" width="800" height="1500"/>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

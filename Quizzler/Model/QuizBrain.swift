@@ -7,7 +7,7 @@ struct QuizBrain {
         Question(q: "Which type is used for single symbole?", a: ["Char", "Symb", "Character"], correctAnswer: "Character"),
         Question(q: "Which of these is not a collection", a: ["Tuple", "Array", "Dictionary"], correctAnswer: "Tuple"),
         Question(q: "What keyword for function?", a: ["method", "func", "fun"], correctAnswer: "func"),
-        Question(q: "Which of these correctly initializes a string?", a: ["var str = String()", "str = \"Some string\"", "let str: String = some string"], correctAnswer: "var str = String()"),
+        Question(q: "Which of these correctly initializes a string?", a: ["var str = String()", "str = \"Some string\"", "str: String = string"], correctAnswer: "var str = String()"),
         Question(q: "What floating-point type is prefered?", a: ["Double", "Float", "Numeric"], correctAnswer: "Double"),
         Question(q: "How to write variables/constants correctly?", a: ["Capitalized", "Lower case", "As you wish"], correctAnswer: "Lower case"),
         Question(q: "How to write types correctly?", a: ["Capitalized", "Lower case", "As you wish"], correctAnswer: "Capitalized"),
@@ -17,7 +17,7 @@ struct QuizBrain {
     var score = 0
     
     mutating func checkAnswer(_  userAnswer: String) -> Bool{
-        if userAnswer == quiz[questionNumber].answer {
+        if userAnswer == quiz[questionNumber].correctAnswer {
             score += 1
             return true
         } else {
@@ -45,4 +45,8 @@ struct QuizBrain {
     func getScore() -> Int {
         return score
     }
+    
+    func getAnswer(_ n: Int) -> String {
+        return quiz[questionNumber].answer[n]
+        }
 }

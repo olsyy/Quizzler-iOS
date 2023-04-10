@@ -3,8 +3,9 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
-    @IBOutlet weak var trueButton: UIButton!
-    @IBOutlet weak var falseButton: UIButton!
+    @IBOutlet weak var firstButton: UIButton!
+    @IBOutlet weak var secondButton: UIButton!
+    @IBOutlet weak var thirdButton: UIButton!
     @IBOutlet weak var scoreLabel: UILabel!
     
     var quizBrain = QuizBrain()
@@ -15,8 +16,6 @@ class ViewController: UIViewController {
     }
 
     @IBAction func answerButtonPressed(_ sender: UIButton) {
-
-        
         let userAnswer = sender.currentTitle!
         let userGotItRight = quizBrain.checkAnswer(userAnswer)
         
@@ -35,8 +34,14 @@ class ViewController: UIViewController {
         questionLabel.text = quizBrain.getQuestionText()
         progressBar.progress = quizBrain.getProgress()
         scoreLabel.text = "Score: \(quizBrain.getScore())"
-        trueButton.backgroundColor = UIColor.clear
-        falseButton.backgroundColor = UIColor.clear
+        firstButton.backgroundColor = UIColor.clear
+        secondButton.backgroundColor = UIColor.clear
+        thirdButton.backgroundColor = UIColor.clear
+        
+        firstButton.setTitle(quizBrain.getAnswer(0), for: .normal)
+        secondButton.setTitle(quizBrain.getAnswer(1), for: .normal)
+        thirdButton.setTitle(quizBrain.getAnswer(2), for: .normal)
+        
     }
 }
 

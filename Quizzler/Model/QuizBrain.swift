@@ -2,18 +2,16 @@ import Foundation
 
 struct QuizBrain {
     let quiz = [
-        Question(q: "Constant and variable names can contain whitespace characters", a: "False"),
-        Question(q: "You declare constants without keyword", a: "False"),
-        Question(q: "You declare variable with the var keyword", a: "True"),
-        Question(q: "Single-line comments begin with two forward-slashes (//)", a: "True"),
-        Question(q: "Unsigned integer can be only positive numbers or zero", a: "False"),
-        Question(q: "You a;ways need to pick a specific size of integer (Int64 or Int32) ", a: "False"),
-        Question(q: "Double is preferef for floating-point-numbers in your code", a: "True"),
-        Question(q: "Swift is a type-safe language", a: "True"),
-        Question(q: "Swift provides two Boolean constant: 1 and 0", a: "False"),
-        Question(q: "Tuples group multiple values with the same type into a single compound value.", a: "False"),
-        Question(q: "The special value of optional type is void", a: "False"),
-        Question(q: "Char is a keyword for single symbol type", a: "False")
+        Question(q: "Which logical operator does not exist?", a: ["&&", "||", "??" ], correctAnswer: "??"),
+        Question(q: "Which of these operators returns the remainder ", a: ["%", "//", "$"], correctAnswer: "%"),
+        Question(q: "Which type is used for single symbole?", a: ["Char", "Symb", "Character"], correctAnswer: "Character"),
+        Question(q: "Which of these is not a collection", a: ["Tuple", "Array", "Dictionary"], correctAnswer: "Tuple"),
+        Question(q: "What keyword for function?", a: ["method", "func", "fun"], correctAnswer: "func"),
+        Question(q: "Which of these correctly initializes a string?", a: ["var str = String()", "str = \"Some string\"", "let str: String = some string"], correctAnswer: "var str = String()"),
+        Question(q: "What floating-point type is prefered?", a: ["Double", "Float", "Numeric"], correctAnswer: "Double"),
+        Question(q: "How to write variables/constants correctly?", a: ["Capitalized", "Lower case", "As you wish"], correctAnswer: "Lower case"),
+        Question(q: "How to write types correctly?", a: ["Capitalized", "Lower case", "As you wish"], correctAnswer: "Capitalized"),
+        Question(q: "Which keyword for variables?", a: ["let", "var", "write type of it"], correctAnswer: "var")
     ]
     var questionNumber = 0
     var score = 0
